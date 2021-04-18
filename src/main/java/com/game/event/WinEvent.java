@@ -1,4 +1,4 @@
-package com.game.api.event;
+package com.game.event;
 
 public class WinEvent extends Event {
 

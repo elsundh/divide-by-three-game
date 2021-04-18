@@ -7,7 +7,7 @@ import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Repository;
 import org.springframework.web.server.WebSession;
 
-import com.game.api.event.Event;
+import com.game.event.Event;
 import com.game.model.Game;
 
 import lombok.extern.slf4j.Slf4j;

@@ -18,10 +18,10 @@ import org.springframework.test.web.reactive.server.WebTestClient;
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.game.api.PlayersController;
-import com.game.api.event.JoinEvent;
-import com.game.api.event.LeaveEvent;
-import com.game.api.event.PlayEvent;
 import com.game.config.SessionConfig;
+import com.game.event.JoinEvent;
+import com.game.event.LeaveEvent;
+import com.game.event.PlayEvent;
 import com.game.repository.GameRepository;
 
 import reactor.core.publisher.Flux;

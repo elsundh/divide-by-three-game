@@ -3,11 +3,11 @@ package com.game.model;
 import java.util.UUID;
 import java.util.concurrent.ThreadLocalRandom;
 
-import com.game.api.event.Event;
-import com.game.api.event.JoinEvent;
-import com.game.api.event.LeaveEvent;
-import com.game.api.event.PlayEvent;
-import com.game.api.event.WinEvent;
+import com.game.event.Event;
+import com.game.event.JoinEvent;
+import com.game.event.LeaveEvent;
+import com.game.event.PlayEvent;
+import com.game.event.WinEvent;
 import com.game.exception.GameException;
 
 import lombok.RequiredArgsConstructor;
@@ -48,7 +48,7 @@ public class Game {
 			if (added == null) {
 				added = calculateAdded();
 			} else {
-				if (isValidAndDivisibleBy3(added)) {
+				if (isInvalidAndDivisibleBy3(added)) {
 					throw new GameException("Wrong added number");
 				}
 			}
@@ -68,10 +68,10 @@ public class Game {
 		}
 	}
 
-	private boolean isValidAndDivisibleBy3(Integer added) {
-		return added < 1 && added > -1 && isDivisibleBy3(added);
+	private boolean isInvalidAndDivisibleBy3(Integer added) {
+		return added > 1 && added < -1 && isNotDivisibleBy3(added);
 	}
-	private boolean isDivisibleBy3(Integer added) {
+	private boolean isNotDivisibleBy3(Integer added) {
 		return (added + latestNumber) % 3 != 0;
 	}
 
@@ -97,7 +97,7 @@ public class Game {
 	private Integer calculateAdded() {
 		Integer added;
 		added = -1;
-		while (added < 1 && isDivisibleBy3(added)) {
+		while (added < 1 && isNotDivisibleBy3(added)) {
 			added++;
 		}
 		return added;

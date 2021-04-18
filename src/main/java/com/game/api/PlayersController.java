@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.WebSession;
 
-import com.game.api.event.Event;
+import com.game.event.Event;
 import com.game.repository.GameRepository;
 
 import lombok.RequiredArgsConstructor;

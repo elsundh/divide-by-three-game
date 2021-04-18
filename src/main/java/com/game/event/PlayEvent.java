@@ -1,4 +1,4 @@
-package com.game.api.event;
+package com.game.event;
 
 import lombok.Getter;
 import lombok.Setter;

@@ -8,11 +8,11 @@ import org.springframework.test.util.ReflectionTestUtils;
 
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.JsonMappingException;
-import com.game.api.event.Event;
-import com.game.api.event.JoinEvent;
-import com.game.api.event.LeaveEvent;
-import com.game.api.event.PlayEvent;
-import com.game.api.event.WinEvent;
+import com.game.event.Event;
+import com.game.event.JoinEvent;
+import com.game.event.LeaveEvent;
+import com.game.event.PlayEvent;
+import com.game.event.WinEvent;
 
 import reactor.core.publisher.Sinks;
 
